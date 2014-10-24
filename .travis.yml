@@ -2,5 +2,10 @@ language: cpp
 compiler:
   - gcc
   - clang
-# Change this to your needs
-script: ./configure && make
+os:
+  - linux
+  - osx
+  # Change this to your needs
+script: 
+  ./configure && make
+  make test
