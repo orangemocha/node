@@ -3,7 +3,6 @@ Evented I/O for V8 javascript.
 
 ### To build:
 
-
 Prerequisites (Unix only):
 
     * GCC 4.2 or newer
