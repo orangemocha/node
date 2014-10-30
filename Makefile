@@ -1,5 +1,6 @@
 -include config.mk
 
+# test test
 BUILDTYPE ?= Release
 PYTHON ?= python
 NINJA ?= ninja
