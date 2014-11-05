@@ -237,7 +237,7 @@ class TapProgressIndicator(SimpleProgressIndicator):
     if output.UnexpectedOutput():
       status_line = 'not ok %i - %s' % (self._done, command)
       if FLAKY in output.test.outcomes and self.flaky_tests_mode == "dontcare":
-        status_line = status_line + " # TODO Fix flaky test"
+        status_line = status_line + " # TODO : Fix flaky test"
       print status_line
       for l in output.output.stderr.splitlines():
         print '#' + l
@@ -246,7 +246,7 @@ class TapProgressIndicator(SimpleProgressIndicator):
     else:
       status_line = 'ok %i - %s' % (self._done, command)
       if FLAKY in output.test.outcomes:
-        status_line = status_line + " # TODO Fix flaky test"
+        status_line = status_line + " # TODO : Fix flaky test"
       print status_line
 
     duration = output.test.duration
