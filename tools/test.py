@@ -1479,7 +1479,7 @@ def Main():
   cases_to_run = [ c for c in all_cases if not DoSkip(c) ]
   if len(cases_to_run) == 0:
     print "No tests to run."
-    return 0
+    return 1
   else:
     try:
       start = time.time()
