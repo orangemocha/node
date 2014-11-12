@@ -1079,6 +1079,9 @@ class Configuration(object):
     self.defs = defs
 
   def ClassifyTests(self, cases, env):
+#    print self.sections
+#    evals = [s.condition.Evaluate(env,self.defs) for s in self.sections]
+#    print evals
     sections = [s for s in self.sections if s.condition.Evaluate(env, self.defs)]
     all_rules = reduce(list.__add__, [s.rules for s in sections], [])
     unused_rules = set(all_rules)
@@ -1104,6 +1107,7 @@ class Section(object):
 
   def __init__(self, condition):
     self.condition = condition
+#    print condition
     self.rules = [ ]
 
   def AddRule(self, rule):
@@ -1146,6 +1150,7 @@ def ReadConfigurationInto(path, sections, defs):
   for line in utils.ReadLinesFrom(path):
     header_match = HEADER_PATTERN.match(line)
     if header_match:
+#      print line
       condition_str = header_match.group(1).strip()
       condition = ParseCondition(condition_str)
       new_section = Section(condition)
@@ -1184,6 +1189,9 @@ def ReadConfigurationInto(path, sections, defs):
 
 
 ARCH_GUESS = utils.GuessArchitecture()
+
+print 'OS_GUESS: %s' % utils.GuessOS();
+print 'ARCH_GUESS: %s' % utils.GuessArchitecture();
 
 
 def BuildOptions():
