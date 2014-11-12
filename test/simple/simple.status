@@ -1,7 +1,7 @@
 prefix simple
 
 
-# [arch==ia32]
+[system==win32 && arch==ia32]
 
 #  test-alexis : FAIL if $arch==win32,PASS  TODO["Fix Flaky Test"]
 
