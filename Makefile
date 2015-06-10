@@ -419,7 +419,7 @@ bench-idle:
 	./node benchmark/idle_clients.js &
 
 test-ci:
-	$(PYTHON) tools/test.py -ptap --logfile test.tap --mode=release --arch=$(DESTCPU) simple message internet
+	$(PYTHON) tools/test.py -ptap --logfile test.tap --mode=release simple message internet
 	$(MAKE) jslint
 	$(MAKE) cpplint
 
