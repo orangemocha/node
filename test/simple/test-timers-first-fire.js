@@ -22,6 +22,9 @@
 var common = require('../common');
 var assert = require('assert');
 
+if (process.platform == 'win32') {
+	assert.ok(false)
+}
 var TIMEOUT = 50;
 var last = process.hrtime();
 setTimeout(function() {
