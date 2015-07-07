@@ -25,6 +25,8 @@ var assert = require('assert');
 var d = domain.create();
 var expect = ['pbkdf2', 'randomBytes', 'pseudoRandomBytes']
 
+assert.ok(false, 'Force flaky test failure')
+
 d.on('error', function (e) {
   var idx = expect.indexOf(e.message);
   assert.notEqual(idx, -1, 'we should have error: ' + e.message);
