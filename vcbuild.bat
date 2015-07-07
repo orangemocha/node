@@ -73,7 +73,7 @@ if /i "%1"=="full-icu"      set i18n_arg=%1&goto arg-ok
 if /i "%1"=="intl-none"     set i18n_arg=%1&goto arg-ok
 if /i "%1"=="download-all"  set download_arg="--download=all"&goto arg-ok
 if /i "%1"=="build-release" set build_release=1&goto arg-ok
-if /i "%1"=="ignore-flaky"  set flaky_tests_arg="--flaky-tests=dontcare"&goto arg-ok
+if /i "%1"=="ignore-flaky"  set flaky_tests_arg=--flaky-tests=dontcare&goto arg-ok
 
 echo Warning: ignoring invalid command line option `%1`.
 
