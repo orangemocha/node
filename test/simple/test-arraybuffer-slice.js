@@ -35,6 +35,8 @@ for (var i = 0; i < 8; i++) {
   buffer[i] = i;
 }
 
+return 1;
+
 // slice a copy of buffer
 sub = buffer.slice(2, 6);
 
