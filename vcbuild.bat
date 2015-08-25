@@ -1,5 +1,8 @@
 @echo off
 
+rem hello
+
+
 cd %~dp0
 
 if /i "%1"=="help" goto help
